@@ -3,6 +3,8 @@
 // selecionar div
 let div = document.getElementById("tabela");
 
+div.style.marginBottom = "20px"
+
 // criar elemento tabela
 
 let tabela = document.createElement("table")
@@ -10,6 +12,10 @@ tabela.border = "1"
 
 // criar elemento thead
 let thead = document.createElement("thead")
+
+// estilizar o thead
+
+thead.className = "fundo2"
 
 // criar elemento tr
 let tr = document.createElement("tr")
@@ -28,6 +34,9 @@ th3.textContent = "Quantidade"
 // criar elemento tbody
 
 let tbody = document.createElement("tbody")
+
+tbody.style.backgroundColor = "silver"
+tbody.style.color= "white"
 
 // criar elemento tr
 let tr2 = document.createElement("tr")
@@ -104,6 +113,12 @@ let div2 = document.getElementById("formulario");
 // criar elemento form
 let form = document.createElement("form")
 
+// estilizar o form
+form.style.border = "1px solid black"
+form.style.borderRadius = "5px"
+form.style.width = "300px"
+form.style.padding = "10px"
+
 // criar elemento label
 let label1 = document.createElement("label")
 label1.textContent = "Nome da Fruta: "
@@ -156,3 +171,27 @@ form.appendChild(input3)
 form.appendChild(document.createElement("br"))
 form.appendChild(button)
 
+
+
+// criar botao para mudar cor da formulario
+
+// selecionar div
+let div3 = document.getElementById("botao");
+
+
+
+// criar elemento button
+let button2 = document.createElement("button")
+
+button2.style.marginBottom = "10px"
+
+button2.ondblclick = function(){
+    form.style.backgroundColor = "red"
+}
+
+
+// adicionar texto ao button
+button2.textContent = "Mudar a Cor"
+
+//adicionar button na div
+div3.appendChild(button2)
